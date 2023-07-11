@@ -53,7 +53,7 @@ const Portfolio = () => {
                 portfolios.map(({id, src, demoHref, codeHref}) => (
                     <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
                       <img src={src} alt='imagen proyecto react porfolio' className='rounded-md duration-200 hover:scale-105'/>
-                      <div className='flex justify-center items-center'>
+                      <div className='flex items-center justify-center'>
                       <a href={demoHref} target="_blank" rel="noopener noreferrer" className="w-1/2 px-6 m-4 duration-200 hover:scale-105">Demo</a>
                 <a href={codeHref} target="_blank" rel="noopener noreferrer" className="w-1/2 px-6 m-4 duration-200 hover:scale-105">Code</a>
                       </div>
