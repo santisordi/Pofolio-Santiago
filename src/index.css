@@ -11,3 +11,10 @@
     font-family: 'Raleway', sans-serif;
   }
 }
+
+@media (max-width: 768px) {
+  .fotoSanti img {
+    width: 80%;
+  }
+}
+

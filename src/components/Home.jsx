@@ -22,8 +22,8 @@ export const Home = () => {
                         </Link>                    
                     </div>
                 </div>
-                <div className='mb-10'>
-                    <img src={santiFoto} alt="miporfolio" className='rounded-2xl mx-auto md:w-full'/>
+                <div className='mb-10 fotoSanti'>
+                    <img src={santiFoto} alt="miporfolio" className='rounded-2xl mx-auto md:w-full '/>
                 </div>
             </div>
         </div>

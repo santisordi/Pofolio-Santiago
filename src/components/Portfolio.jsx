@@ -17,7 +17,7 @@ const Portfolio = () => {
     {
       id: 2,
       src: webLucrecia,
-      demoHref: "https://app.netlify.com/sites/lalucrecia/overview",
+      demoHref: "https://lalucreciacasadecampo.netlify.app/",
       codeHref: "https://github.com/santisordi/DesarrolloWeb-LaLucrecia"
     },
     {
@@ -29,7 +29,7 @@ const Portfolio = () => {
     {
       id: 4,
       src: jsCotizador,
-      demoHref: "https://app.netlify.com/sites/cotizadorseguroscoder/overview",
+      demoHref: "https://cotizadorseguroscoder.netlify.app/",
       codeHref: "https://github.com/santisordi/JavaScrip-CotizadorSeguros"
     },
     {
