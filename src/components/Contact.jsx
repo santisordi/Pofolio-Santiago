@@ -41,10 +41,7 @@ const Contact = (props) => {
         // Si la validación es exitosa, enviar los datos y restablecer el formulario
         props.addOrEditLink(values);
         resetForm();
-        
-        // Mostrar una alerta de éxito
-        Swal.fire('Success', 'Form submitted successfully.', 'success');
-      };
+     };
       
 
     return (

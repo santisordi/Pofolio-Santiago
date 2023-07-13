@@ -1,6 +1,6 @@
 import React from 'react'
 import Contact from './Contact'
-import { db } from "../firebase";
+import { db } from "../../src/firebase";
 import { addDoc, collection } from 'firebase/firestore';
 import Swal from 'sweetalert2'
 
