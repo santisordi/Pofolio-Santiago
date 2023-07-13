@@ -5,9 +5,6 @@ import NavBar from "./components/NavBar";
 import Portfolio from "./components/Portfolio";
 import SocialLinks from "./components/SocialLinks";
 import Links from "./components/Links";
-import "./firebase";
-
-
 
 function App() {
   return (
