@@ -28,7 +28,6 @@ const Links = () => {
   return (
     <div>
       <Contact addOrEditLink={addOrEditLink} />
-      Links
     </div>
   );
 };

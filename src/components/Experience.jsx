@@ -8,6 +8,7 @@ import bootstrap from "../assets/bootstrap.png";
 import node from "../assets/node.png";
 import gitHub from "../assets/github.png";
 import python from "../assets/python.png";
+import firebase from "../assets/firebase.png";
 
 
 const Experience = () => {
@@ -66,6 +67,12 @@ const Experience = () => {
             src: python,
             title: "Python",
             style: "shadow-yellow-600"
+        },
+        {
+            id: 10,
+            src: firebase,
+            title: "Firebase",
+            style: "shadow-orange-600"
         }
 
     ]

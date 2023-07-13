@@ -1,72 +1,104 @@
-import React, { useState } from 'react'
-import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-scroll";
-import SocialLinks from './SocialLinks';
+import React, { useState } from 'react';
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { Link } from 'react-scroll';
 
 const NavBar = () => {
+  const [nav, setNav] = useState(false);
 
-    const [nav, setNav] = useState (false);
-    
-    const links = [
-        {
-            id:1,
-            link:"home"
-        },
-        {
-            id:2,
-            link:"about"
-        },
-        {
-            id:3,
-            link:"portfolio"
-        },
-        {
-            id:4,
-            link:"experience"
-        },
-        {
-            id:5,
-            link:"contact"
-        }
-    ]
-    
-    
-    return (
-        <div className='flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed'>
-            <div>
-                <h1 className='text-5xl font-signature ml-2'>Santiago</h1>
-            </div>
+  const links = [
+    { id: 1, link: 'home' },
+    { id: 2, link: 'about' },
+    { id: 3, link: 'portfolio' },
+    { id: 4, link: 'experience' },
+    { id: 5, link: 'contact' },
+  ];
 
-            <ul className='hidden md:flex'>
-                {links.map(({id, link}) => (
-                    <li key={id} 
-                    className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-                        
-                        <Link to={link} smooth duration={500}>{link}</Link>
-                        
-                    </li>                 
-                ))}
-            </ul>
-            <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 text-gray-400 md:hidden'>
-                {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-            </div>
+  const socialLinks = [
+    {
+      id: 1,
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/santiagosordi/',
+      icon: <FaLinkedin size={30} />,
+    },
+    {
+      id: 2,
+      label: 'Github',
+      href: 'https://github.com/santisordi',
+      icon: <FaGithub size={30} />,
+    },
+    {
+      id: 3,
+      label: 'Mail',
+      href: 'mailto:santiagosordi@gmail.com',
+      icon: <HiOutlineMail size={30} />,
+    },
+    {
+      id: 4,
+      label: 'Resume',
+      href: '/CVs Santiago Sordi.rar',
+      download: true,
+      icon: <BsFillPersonLinesFill size={30} />,
+    },
+  ];
 
-            {nav && (
-            <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500'>
-            {links.map(({id, link}) => (
-                    <li key={id} 
-                    className='px-4 cursor-pointer capitalize py-6 text-4xl'>
-                        <Link onClick={()=> setNav(!nav)} to={link} smooth duration={500}>{link}</Link>
-                    </li>                 
-                ))} 
+  return (
+    <div className='flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed'>
+      <h1 className='text-5xl font-signature ml-2'>Santiago</h1>
 
-                <SocialLinks />  
-            </ul>               
-            )}
+      <ul className='hidden md:flex'>
+        {links.map(({ id, link }) => (
+          <li
+            key={id}
+            className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'
+          >
+            <Link to={link} smooth duration={500}>
+              {link}
+            </Link>
+          </li>
+        ))}
+      </ul>
 
+      <div
+        onClick={() => setNav(!nav)}
+        className='cursor-pointer pr-4 z-10 text-gray-400 md:hidden'
+      >
+        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+      </div>
 
-        </div>
-    )
-}
+      {nav && (
+        <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500'>
+          {links.map(({ id, link }) => (
+            <li
+              key={id}
+              className='px-4 cursor-pointer capitalize py-6 text-4xl'
+            >
+              <Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>
+                {link}
+              </Link>
+            </li>
+          ))}
+
+          {/* Mostrar los enlaces de SocialLinks dentro del menú desplegable */}
+          {socialLinks.map(({ id, label, href, icon, download }) => (
+            <li key={id} className='flex items-center w-full py-4'>
+              <a
+                href={href}
+                className='text-white flex justify-center items-center w-full'
+                download={download}
+                target='_blank'
+                rel='noreferrer'
+              >
+                {icon}
+                <span className='ml-2'>{label}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
 
 export default NavBar;
