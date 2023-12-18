@@ -41,7 +41,7 @@ const SocialLinks = () => {
                 Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: '/CVs Santiago Sordi.rar',
+            href: '/Cvs Santiago Sordi.zip',
             style: 'rounded-br-md',
             download: true,
         }

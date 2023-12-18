@@ -4,6 +4,7 @@ import webLucrecia from "../assets/portfolioimg/ProyectoWeb-La Lucrecia.png";
 import reactRegionales from "../assets/portfolioimg/ProyectoReactJS-Regionales.png";
 import jsCotizador from "../assets/portfolioimg/ProyectoJS-CotizadorSeguros.png";
 import bsCoinbaseWeb from "../assets/portfolioimg/bsCoinbaseWeb.png";
+import tetris from "../assets/portfolioimg/tetris.png";
 
 const Portfolio = () => {
 
@@ -37,6 +38,12 @@ const Portfolio = () => {
       src: bsCoinbaseWeb,
       demoHref: "https://replicasitiocoinbasebootstrap.netlify.app/",
       codeHref: "https://github.com/santisordi/DesarrolloWeb-ReplicaCoinbase"
+    },
+    {
+      id: 7,
+      src: tetris,
+      demoHref: "https://tetrisvitejs.netlify.app",
+      codeHref: "https://github.com/santisordi/Tetris-ViteJS.git"
     }
   ]
 
