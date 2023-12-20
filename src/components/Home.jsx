@@ -11,7 +11,7 @@ export const Home = () => {
                     <h2 className='text-4xl sm:text-7xl font-bold text-white'>
                             I'm a frontend developer
                     </h2>
-                    <p className='text-gray-500 py-4 max-w-md'> I have been studying to become FullStack for more than 1 year. Currently I work on my projects using technologies like React, Tailwind, Bootstrap, Next JS.
+                    <p className='text-gray-500 py-4 max-w-md'> Hi, I'm a fullstack MERN developer with experience in building web applications using MongoDB, Express, React, and Node.js.
                     </p> 
                     <div style={{ clear: 'both' }}>
                         <Link to="portfolio" smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
